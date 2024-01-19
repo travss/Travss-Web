@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travss | Resume</title>
+    <link rel="stylesheet" type="text/css" href="css_resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+</head>
+<body>
+
+<div class="resume-main">
+     <div class="left-box">
+        <br><br>
+		<div class="profile">
+			<img src="resumeprofic.jpg">
+		</div>
+		<div class="content-box">
+		<h2>Profile Info</h2>
+		<hr class="hr1">
+		<p class="p1">Email: deligerojj@students.nu-fairview.edu.ph<br><br>Contact No.: +639217195318</p>
+
+		<h3>Language:</h3>
+		<p class="p2">Tagalog</p>
+		<div id="progress"></div>
+		<p class="p2">English</p>
+		<div id="progress1"></div>
+
+		<br>
+		<h2>My Skills</h2>
+		<hr class="hr1">
+		<br>
+		<div class="col-div-6"><p class="p2">HTML</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+			<div class="clearfix"></div>
+		<div class="col-div-6"><p class="p2">CSS</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+			<div class="clearfix"></div>
+		<div class="col-div-6"><p class="p2">JAVASCRIPT</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+			<div class="clearfix"></div>
+		<div class="col-div-6"><p class="p2">PYTHON</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+
+			<div class="clearfix"></div>
+			<br>
+			<h2>interests</h2>
+			<hr class="hr1">
+			<br>
+			<div class="col-div-3 col3">
+				<i class="fa fa-futbol-o in"></i>
+				<span class="inp">Gaming</span>
+			</div>
+			<div class="col-div-3 col3">
+				<i class="fa fa-futbol-o in"></i>
+				<span class="inp">Sports</span>
+			</div>
+		</div>
+    </div>
+
+    <div class="right-box">
+        <h1>
+			JHON TRAVIS<br>
+			<span>DELIGERO</span>
+		</h1>
+		<p class="p3">BSIT-MI STUDENT</p>
+
+		<br>	
+		<h2 class="heading">My Education</h2>
+		<hr class="hr2">
+		<br>
+		<div class="col-div-4">
+			<p class="p5">2022-Present</p>
+			<span class="span1"></span>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">NU Fairview</p>
+			<span class="span1">Course: Bachelor of Science in Information Technology with specialization in Mobile and Internet Technology (BSIT-MI)</span>
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<div class="col-div-4">
+			<p class="p5">2020-2022</p>
+			<span class="span1"></span>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">Carlos P. Romulo S.H.S.</p>
+			<span class="span1">Senior High School</span>
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<div class="col-div-4">
+			<p class="p5">2016-2020</p>
+			<span class="span1"></span>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">Ernesto Rondon H.S.</p>
+			<span class="span1">Junior High School</span>
+		</div>
+		<div class="clearfix"></div>
+
+		<br>	
+		<h2 class="heading">Technical Skills</h2>
+		<hr class="hr2">
+		<br>
+		<div class="col-div-4">
+			<p class="p5"></p>
+			<span class="span1"></span>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">Programming Languages:</p>
+			<span class="span1">Java, Python, HTML,<br> CSS, & JavaScript</span>
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<div class="col-div-4">
+			<p class="p5"></p>
+			<span class="span1"></span>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">Operating System</p>
+			<span class="span1">Windows & Linux</span>
+		</div>
+		<div class="clearfix"></div>
+    </div>
+
+    <div class="clearfix"></div>
+</div>
+
+<button id="download-btn">Download as PDF</button>
+
+<script>
+    document.getElementById('download-btn').addEventListener('click', () => {
+        const element = document.querySelector('.resume-main');
+        html2pdf(element, {
+            margin: 10,
+            filename: 'Jhon_Travis_Deligero_Resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        });
+    });
+</script>
+
+</body>
+</html>
+

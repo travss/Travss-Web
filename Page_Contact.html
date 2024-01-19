@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Travss | Contact</title>
+    <link rel="stylesheet" href="css_contact.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="left-side">
+            <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Caloocan, Blk6 Lt 3</div>
+          <div class="text-two">Rainbow Vill. 1400</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+6392 1719 5318</div>
+         
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">jhontravisjeremias@gmail.com</div>
+          <div class="text-two">info.travssweb@gmail.com</div>
+        </div>
+        </div>
+        <div class="right-side">
+            <div class="topic-text">Send me a message</div>
+            <p>If you have any inquiries for me, feel free to send me your name and email address, and I'll contact you myself to answer your questions.</p>
+            <form id="contactForm">
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your name" id="name">
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your email" id="email">
+                </div>
+
+                <div class="input-box message-box">
+                    
+                </div>
+                <div class="button">
+                    <input type="button" value="Send Now" onclick="sendMessage()">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function sendMessage() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+
+        if (name.trim() === '' || email.trim() === '') {
+            alert('Please enter your name and email before sending.');
+        } else {
+            alert('Message sent! We will contact you shortly.');
+            // You can add additional logic to send the form data to a server if needed.
+        }
+    }
+</script>
+
+</body>
+</html>
